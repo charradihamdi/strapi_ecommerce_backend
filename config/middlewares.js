@@ -4,6 +4,12 @@ module.exports = [
   {
     name: 'strapi::security',
     config: {
+      name: 'strapi::cors',
+      config: {
+        enabled: true,
+        header: '*',
+        origin: ['http://127.0.0.1:5173']
+      },
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
